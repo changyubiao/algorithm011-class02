@@ -36,7 +36,7 @@ https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
 from typing import List
 
 
-class Solution:
+class Solution01:
     def removeDuplicates(self, nums: List[int]) -> int:
         """
         这里借助了 set 的空间 空间复杂度 为 O(不重复的个数)
@@ -55,8 +55,30 @@ class Solution:
         return j
 
 
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+
+        j, i = 0, 1
+
+        length = len(nums)
+
+        while i < length:
+            if nums[i] != nums[j]:
+                if i -j >1:
+                    print("防止重复赋值的问题")
+                    # 防止重复赋值的问题
+                    nums[j+1] = nums[i]
+                j += 1
+
+            i += 1
+        return j+1
+
+
+
+
 if __name__ == '__main__':
-    nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4,5,5,5,5]
+    # nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4,5,5,5,5]
+    nums = [0, 1, 2, 3, 4, 5]
 
     r = Solution().removeDuplicates(nums=nums)
     print(r)
