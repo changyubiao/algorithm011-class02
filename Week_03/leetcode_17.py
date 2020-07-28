@@ -68,7 +68,6 @@ class Solution:
             self._generate_combination(digits, hash_map, current_result + letters[j], level + 1)
 
         # reverse states
-        pass
 
 
 if __name__ == '__main__':

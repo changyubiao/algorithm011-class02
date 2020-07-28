@@ -27,6 +27,10 @@
 
 
 
+
+https://leetcode-cn.com/problems/powx-n
+
+
 1 暴力求解
 
 
