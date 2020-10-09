@@ -2,6 +2,12 @@ import random
 from typing import List
 
 
+"""
+meger sort 归并 排序 
+
+"""
+
+
 class Solution:
 
     def mergesort(self, array: List, left, right):
